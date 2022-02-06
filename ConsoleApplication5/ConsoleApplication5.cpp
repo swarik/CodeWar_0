@@ -44,4 +44,17 @@ int main()
 	vector<string> cd = { "A", "B", "C", "D", "N"};
 	StockList result;
 	cout << result.stockSummary(art, cd);
+	int t = 0;
+	__asm 
+	{
+		mov eax,5
+		
+		loops:
+		inc eax
+			cmp eax, 5000
+			jnz loops
+		add t, eax
+	}
+	cout << "\nT= " << t << endl;
+
 }
